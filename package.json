@@ -21,26 +21,17 @@
     "url": "https://github.com/jomaxx/react-promise-component/issues"
   },
   "homepage": "https://github.com/jomaxx/react-promise-component#readme",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "babel": {
-    "presets": [
-      "./config/babel.js"
-    ]
+    "presets": ["./config/babel.js"]
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all"
   },
   "lint-staged": {
-    "*.{js,md,json}": [
-      "prettier --write",
-      "git add"
-    ],
-    "yarn.lock": [
-      "git rm --cached"
-    ]
+    "*.{js,md,json}": ["prettier --write", "git add"],
+    "yarn.lock": ["git rm --cached"]
   },
   "peerDependencies": {
     "react": "16.x"
@@ -49,6 +40,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "husky": "^0.14.3",
     "jest": "^22.1.4",
     "lint-staged": "^6.0.1",
@@ -58,7 +50,5 @@
     "rollup": "^0.55.0",
     "rollup-plugin-babel": "^3.0.3"
   },
-  "dependencies": {
-    "babel-preset-react": "^6.24.1"
-  }
+  "dependencies": {}
 }
