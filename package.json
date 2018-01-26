@@ -1,0 +1,55 @@
+{
+  "name": "react-promise-component",
+  "version": "0.0.0",
+  "description": "Sane promise chaining for React!",
+  "main": "lib/index.js",
+  "module": "lib/module.js",
+  "scripts": {
+    "prebuild": "rm -rf lib",
+    "build": "rollup -c config/rollup.js",
+    "test": "NODE_ENV=test jest",
+    "prepublishOnly": "npm run build",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jomaxx/react-async-await.git"
+  },
+  "author": "Jo Maxx Blake <jo.maxx.blake@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jomaxx/react-async-await/issues"
+  },
+  "homepage": "https://github.com/jomaxx/react-async-await#readme",
+  "files": ["lib"],
+  "babel": {
+    "presets": ["./config/babel.js"]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "lint-staged": {
+    "*.{js,md,json}": ["prettier --write", "git add"],
+    "yarn.lock": ["git rm --cached"]
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "husky": "^0.14.3",
+    "jest": "^22.1.4",
+    "lint-staged": "^6.0.1",
+    "prettier": "^1.10.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rollup": "^0.55.0",
+    "rollup-plugin-babel": "^3.0.3"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.24.1"
+  }
+}
