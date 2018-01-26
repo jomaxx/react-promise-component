@@ -40,19 +40,14 @@ test('rejects promise on mount', done => {
 test(
   'resolves promise chain on mount',
   done => {
-    let i = 0;
-
-    const increment = () => {
-      console.log('test');
-      i = i + 1;
-    };
+    const spy = jest.fn();
 
     const Async = createPromiseComponent()
-      .then(increment)
-      .then(increment)
-      .then(increment)
+      .then(spy)
+      .then(spy)
+      .then(spy)
       .then(() => {
-        expect(i).toBe(3);
+        expect(spy).toHaveBeenCalledTimes(3);
       })
       .finally(done);
 
@@ -63,20 +58,15 @@ test(
 
 test('rejects promise chain on mount', done => {
   const error = new Error('test');
-
-  let i = 0;
-
-  const increment = () => {
-    i = i + 1;
-  };
+  const spy = jest.fn();
 
   const Async = createPromiseComponent()
-    .then(increment)
-    .then(increment)
+    .then(spy)
+    .then(spy)
     .then(() => Promise.reject(error))
-    .then(increment)
+    .then(spy)
     .catch(caughtError => {
-      expect(i).toBe(2);
+      expect(spy).toHaveBeenCalledTimes(2);
       expect(caughtError).toBe(error);
     })
     .finally(done);

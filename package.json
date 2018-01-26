@@ -8,7 +8,7 @@
     "prebuild": "rm -rf lib",
     "build": "rollup -c config/rollup.js",
     "test": "NODE_ENV=test jest",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "yarn test && yarn build",
     "precommit": "lint-staged"
   },
   "repository": {
