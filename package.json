@@ -1,6 +1,6 @@
 {
   "name": "react-promise-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sane promise chaining for React!",
   "main": "lib/index.js",
   "module": "lib/module.js",
