@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jomaxx/react-async-await.git"
+    "url": "git+https://github.com/jomaxx/react-promise-component.git"
   },
   "author": "Jo Maxx Blake <jo.maxx.blake@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jomaxx/react-async-await/issues"
+    "url": "https://github.com/jomaxx/react-promise-component/issues"
   },
-  "homepage": "https://github.com/jomaxx/react-async-await#readme",
+  "homepage": "https://github.com/jomaxx/react-promise-component#readme",
   "files": [
     "lib"
   ],
